@@ -1,0 +1,17 @@
+{
+	"name": "azure_sql_db",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azure_sql_db_new",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "sales_data_yearly"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,60 @@
+{
+	"name": "test1",
+	"properties": {
+		"activities": [
+			{
+				"name": "proceesing csv file",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/vamsitraining001@gmail.com/test",
+					"baseParameters": {
+						"bronzePath": {
+							"value": "@variables('bronzePath')",
+							"type": "Expression"
+						},
+						"fileName": {
+							"value": "@pipeline().parameters.fileName",
+							"type": "Expression"
+						},
+						"archivePath": {
+							"value": "@variables('archivePath')",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "db_ls",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"fileName": {
+				"type": "string",
+				"defaultValue": "raw_sales_data.csv"
+			}
+		},
+		"variables": {
+			"bronzePath": {
+				"type": "String",
+				"defaultValue": "abfss://retailproject@teststgaccount9001.dfs.core.windows.net/bronze"
+			},
+			"archivePath": {
+				"type": "String",
+				"defaultValue": "abfss://retailproject@teststgaccount9001.dfs.core.windows.net/archive"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-07-27T07:24:01Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

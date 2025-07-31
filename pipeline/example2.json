@@ -1,0 +1,38 @@
+{
+	"name": "example2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "pipelineaRunId",
+					"value": {
+						"value": "@pipeline().RunId",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"pipelineRunId": {
+				"type": "string",
+				"defaultValue": "1234"
+			}
+		},
+		"variables": {
+			"pipelineaRunId": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-07-23T03:03:58Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

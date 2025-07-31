@@ -1,0 +1,42 @@
+{
+	"name": "activities_",
+	"properties": {
+		"activities": [
+			{
+				"name": "employee_",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[employeedetail]"
+				},
+				"linkedServiceName": {
+					"referenceName": "sql_db_linked_service",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"PipelineName": {
+				"type": "string",
+				"defaultValue": "Ingestion Pipeline"
+			}
+		},
+		"variables": {
+			"Name": {
+				"type": "String",
+				"defaultValue": "Kapil"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-07-29T15:41:00Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

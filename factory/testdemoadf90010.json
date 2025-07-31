@@ -1,0 +1,17 @@
+{
+	"name": "testdemoadf90010",
+	"properties": {
+		"globalParameters": {
+			"emailNotificationLink": {
+				"type": "string",
+				"value": "https://gmail.com"
+			}
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1971e8c7-c2cc-49cd-9620-22e849c9c8e7",
+		"tenantId": "34760f3a-52be-4c9d-939e-7150333138ec"
+	}
+}
